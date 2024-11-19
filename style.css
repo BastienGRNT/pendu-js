@@ -9,8 +9,8 @@
 
 
 .card {
-    width: 300px;
-    height: 450px;
+    width: 500px;
+    height: 650px;
     border-radius: 30px;
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
@@ -24,4 +24,17 @@
 h1 {
     margin: 0;
     text-align: center;
+}
+
+.pendu-container {
+    padding: 10px; /* Ajoute un espace intérieur */
+    margin: 10px 0; /* Ajoute un espace extérieur */
+    white-space: pre; /* Préserve les espaces et les retours à la ligne */
+    font-family: monospace; /* Utilise une police à espacement fixe pour un meilleur affichage des dessins ASCII */
+    background-color: #f9f9f9; /* Couleur de fond pour mieux voir le conteneur */
+    border: 1px solid #ccc; /* Bordure pour mieux voir le conteneur */
+}
+
+#pendu {
+    margin: 0; /* Supprime la marge par défaut */
 }
