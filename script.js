@@ -103,15 +103,12 @@ let lettre_essayer = [];
 
 inputNom.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
+        event.preventDefault();
         const nom = inputNom.value;
         console.log('Nom:', nom);
         formulaire.style.display = 'none';
         document.getElementById('afficher-nom').innerHTML = '<h1>Bonjour : </h1>' + nom;
     }
-});
-
-formulaire.addEventListener('submit', function(event) {
-    event.preventDefault();
 });
 
 for (let i = 0; i < mot_pendu.length; i++) {
@@ -128,12 +125,9 @@ inputLettre.addEventListener('keydown', function(event) {
         const lettre = inputLettre.value.toUpperCase();
         console.log('Lettre:', lettre);
         inputLettre.value = '';
+
         verifierLettre(lettre)
     }
-})
-
-formulaire.addEventListener('submit', function(event) {
-    event.preventDefault();
 })
 
 function afficherLettresEssayees() {
@@ -177,8 +171,10 @@ function finDuJeu() {
     localStorage.setItem('penduResult', message);
 
     setTimeout(function () {
-        window.location.href = 'rejouer.html';
+        window.location.href = 'rejouer.html?win=true';
     }, 1000);
+
+    //window.location.href = 'rejouer.html?win=true';
 }
 
 

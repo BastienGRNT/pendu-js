@@ -14,7 +14,13 @@
 </div>
 <script>
     const resultMessage = localStorage.getItem('penduResult');
+    let params = new URLSearchParams(window.location.search);
+    let win = params.get('win');
+    if(win){
+        //
+    }else{
 
+    }
     if (resultMessage) {
         document.getElementById('result').textContent = resultMessage;
 
